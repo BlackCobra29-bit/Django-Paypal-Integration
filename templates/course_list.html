@@ -1,0 +1,12 @@
+<h1>Courses</h1>
+<ul>
+    {% for course in courses %}
+        <li>
+            <a href="{% url 'course_detail' course.id %}">
+                <img src="{{ course.image }}" alt="{{ course.title }}">
+                <h2>{{ course.title }} - ${{ course.price }}</h2>
+                <p>{{ course.description }}</p>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
